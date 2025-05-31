@@ -1,4 +1,4 @@
-input[type="text"] {
+/*input[type="text"] {
     border: 5px solid green;
 }
 
@@ -28,4 +28,33 @@ input[type="text"] {
     margin: 25px;
     height: 300px;
     width: 300px;
+}*/
+
+.container {
+    max-width: 1200px;
+    min-width: 600px;
+    margin: 0 auto;
+}
+
+header {
+    height: 200px;
+    background-color: darkcyan;
+}
+
+nav {
+    width: 200px;
+    height: 300px;
+    background-color: darkblue;
+    float: left;
+}
+
+main {
+    background-color: lightblue;
+    /*padding-left: 200px;*/
+    margin-left: 200px;
+}
+
+footer {
+    height: 200px;
+    background-color: #ccc;
 }
