@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="html-class">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>learn HTML & CSS</title>
     <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js"></script>
+    <script>
+        // alert("Hello, world! This is my first HTML page.");
+        //var name = prompt("What is your name?");  //prompt is used to get input from user
+        //alert("Hello, " + name + "! Welcome to my website.");  //concantenation
+        //var a = parseInt(prompt("Enter first number:"));
+        //var b = parseInt(prompt("Enter second number:"));
+
+        //var a = +prompt("Enter first number:");  //"+" is used to convert string to number
+        //var b = +prompt("Enter second number:");
+        // var sum = parseInt(a) + parseInt(b);  //parseInt is used to convert string to integer
+        // alert("The sum of " + a + " and " + b + " is: " + sum);  //concantenation
+        /* if(a>b) {
+            var max = a;
+        }
+        else if(a<b) {
+            max = b;
+        }
+        else {
+            max = "Numbers are equal";
+        }
+        alert(max); */
+
+    </script>
 </head>
-<body>
+<body class="main-page">
     &copy; Created by Zelya 😊
     <!-- <p class="secret">This is first steps of development. Please don't estimate it as profi &#9786</p>
     <h1>Welcome to my website</h1>
@@ -35,14 +59,81 @@
     </div> -->
     
     <div class="container">
-        <header></header>
+        <header>
+            <ul class="menu">
+                <li>list_1</li>
+                <li>list_2</li>
+                <li>list_3</li>
+                <li>list_4</li>
+                <li>list_5</li>
+                <li>list_6</li>
+                <li>list_7</li>
+                <li>list_8</li>
+            </ul>
+            <br><br><br>
+            <p>You can visit a  <a href="personal.html">page</a>  with my personal data</p>
+        </header>
         <nav></nav>
         <main>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis provident maiores sit sunt eos cupiditate, libero ullam in voluptate placeat consectetur fugiat commodi tempore dolorem, inventore porro fugit sequi nostrum molestias, voluptatem ipsam! At mollitia voluptatum suscipit reprehenderit necessitatibus similique facere molestias amet quasi iure id repellat, architecto perspiciatis autem dolorem voluptates dolore quisquam magni a quae quidem culpa accusamus ut eligendi. Tempore minima laboriosam in dolor sapiente error, numquam necessitatibus corrupti ducimus soluta libero voluptates delectus eos at consequatur quis tempora itaque cum nobis veritatis, ea alias quidem. Iste in velit suscipit quis laboriosam atque! In temporibus, pariatur vero ipsam delectus minus reiciendis, voluptate provident fuga non obcaecati rem quas magni dolorum harum commodi saepe. Adipisci, voluptas nam inventore deserunt impedit optio officia architecto, fugiat cumque illo facere porro odio. Ratione dolor corrupti distinctio eveniet eligendi nisi tempora esse voluptatum minima fugit quis maxime in iure explicabo tenetur laborum veniam nihil consequuntur nesciunt quam placeat animi aperiam, quaerat eum. Inventore facilis quisquam molestias unde dolorum autem accusamus blanditiis ex officiis pariatur expedita error perferendis odio aut animi aliquid, consequatur, numquam culpa eveniet omnis vero fugit, nobis eaque reprehenderit! Commodi aliquid recusandae quam minima amet laborum rem accusamus, vero excepturi expedita quaerat sequi? Voluptatibus corrupti quis voluptatum non sit vel expedita. Adipisci aut, libero nostrum voluptatum at modi facere doloribus beatae voluptas ea aspernatur animi vitae! Error laboriosam et illo nulla quaerat saepe aliquam laborum corporis minima ipsum accusamus possimus, repellat animi recusandae quisquam fugiat! Ab esse minima itaque eum consequatur ipsa animi accusamus quaerat dolore voluptatibus, repellat soluta modi placeat. Adipisci voluptas consequuntur, in ullam consectetur esse consequatur officia dolorem nesciunt vitae distinctio vero iusto minima necessitatibus. Debitis eligendi, quasi qui officiis et doloribus repellat magnam amet. Dolorum maiores a nisi voluptatum ratione, exercitationem aperiam veritatis hic cupiditate. Quidem rerum, aperiam repudiandae ipsum animi, voluptates dolorum commodi obcaecati cum consequuntur libero a, dolore asperiores vel illo? Amet dolorum perferendis rem! Nihil id temporibus quisquam voluptatem quaerat dolore veniam similique quae explicabo vero laboriosam eligendi, sequi sed. Odit consequatur, recusandae alias suscipit obcaecati unde deleniti cupiditate ab animi perferendis voluptatibus error accusamus quod adipisci, facilis excepturi doloribus aliquid, quos rerum repellat id debitis! Quia quis quidem recusandae, natus in nulla temporibus ipsam iure nihil animi ad obcaecati quod veritatis repellendus nemo pariatur exercitationem consequuntur aspernatur perferendis ex ut aliquid? Tempora nihil recusandae incidunt quae. Nulla, eaque! Dolores alias accusantium dolore.
+            <div class="block">
+                <script>
+                    function sayHello() {
+                        document.write("<p>Hello, world! This is my first JavaScript function.</p>");
+                    }
+                </script>
+            </div>
+            <div class="block">
+                <script>
+                    sayHello(); //Calling the function to execute it
+                </script>
+            </div>
+            <div class="block">
+                <script>
+                    var numbers = [];
+                    for(var i = 0; i < 10; i++) {
+                        numbers.push(Math.round(Math.random() * 100));
+                        //pop() removes the last element from array
+                    }
+                    document.write("<p>Numbers: " + numbers.join(", ") + "</p>"); //Understood this syntax but did not hear explanation
+                    document.write("<p>Sum of numbers: " + numbers.reduce((a, b) => a + b, 0) + "</p>"); //I don't know this syntax yet
+                    document.write("<p>Array size: " + numbers.length + "</p>");
+                </script>
+            </div>
+            <div class="block">
+                <script>
+                    var random_ = Math.random() * 100 + 1; //Generates a random number between 1 and 100
+                    document.write("<p>Random number: " + Math.round(random_) + "</p>"); //Math.round() rounds the number to the nearest integer
+                </script>
+            </div>
+            <div class="block">
+                <script>
+                    for(var i = 0; i < 10; i++) {
+                        document.write("<p>Paragraph " + (i + 1) + "</p>");
+                    }
+                </script>
+            </div>
+            <div class="block">
+                <script>
+                    var array2d = [
+                        [1, 2, 3],
+                        [4, 5, 6],
+                        [7, 8, 9]
+                    ];
+                    document.write("<p>2D Array:</p>");
+                    for(var i = 0; i < array2d.length; i++) {
+                        document.write("<p>");
+                        for(var j = 0; j < array2d[i].length; j++) {
+                            document.write(array2d[i][j] + " ");
+                        }
+                        document.write("</p>");
+                    }
+                </script>
+            </div>
+            <div class="clearfix"></div>
         </main>
-        <footer></footer>
-
+        <div class="clr"></div>
     </div>
+    <footer></footer>
 
 </body>
 </html>

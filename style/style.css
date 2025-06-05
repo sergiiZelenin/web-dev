@@ -30,21 +30,41 @@
     width: 300px;
 }*/
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.html-class, .main-page {
+    height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .container {
     max-width: 1200px;
     min-width: 600px;
+    min-height: 100%;
     margin: 0 auto;
 }
 
 header {
-    height: 200px;
-    background-color: darkcyan;
+    min-height: 200px;
+    background-color: lightslategray;
+}
+
+.menu li {
+    list-style-type: none;
+    width: 100px;
+    height: 50px;
+    border: 1px solid #000;
+    float: left;
 }
 
 nav {
     width: 200px;
     height: 300px;
-    background-color: darkblue;
+    background-color: lightskyblue;
     float: left;
 }
 
@@ -54,7 +74,125 @@ main {
     margin-left: 200px;
 }
 
+main .block {
+    width: 30%;
+    height: 300px;
+    outline: 1px solid black;
+    float: left;  /*this property breaks many other elements. Be careful*/
+    margin: 1% 1.5%;
+}
+
+main .clearfix {
+    clear: both;
+}
+
+.clr {
+    height: 200px;
+}
+
 footer {
     height: 200px;
+    width: 1200px;
     background-color: #ccc;
+    /* margin-top: -200px; */
+    margin: -200px auto 0;
+}
+
+/*media queries*/
+@media screen and (max-width: 600px) {
+    main .block {
+        width: 45%;
+        margin: 2% 2.5%;
+    }
+    
+    .menu li {
+        float: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    header {
+        background-color: lightgray;
+    }
+    
+}
+
+.circular-image {
+    margin: 60px 0 0 100px;
+    width: 200px;
+    /* Встановіть бажану ширину */
+    height: 200px;
+    /* Встановіть таку ж висоту, щоб отримати коло */
+    border-radius: 50%;
+    /* Це ключова властивість для створення кола */
+    object-fit: cover;
+    /* Ця властивість гарантує, що зображення заповнить
+                           контейнер, зберігаючи пропорції, та обріже зайве.
+                           Важливо, якщо зображення не ідеально квадратне
+                           або має інші пропорції, ніж задані width/height. */ 
+    float: left;
+    }
+
+.personal-page {
+    background-color: #f0f0f0;
+    height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    text-align: center;
+}
+
+.personal_header_1 {
+    color: #4d4d4d;
+}
+
+.personal-header {
+    border-width: 0.14px;
+    border-color: #b5b7ba;
+    border-style: solid;
+    background-color: #dfdfdf;
+    min-height: 100px;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 5px;
+}
+
+.personal-link {
+    color: #4d4d4d;
+    font-size: 20px;
+    font-weight: 100;
+    padding-right: 25px;
+}
+
+.personal-container {
+    max-width: 1200px;
+    min-width: 600px;
+    min-height: 100%;
+    margin: 0 auto;
+}
+
+.personal-footer {
+    height: 200px;
+    width: 1200px;
+    background-color: #ccc;
+    /* margin-top: -200px; */
+    margin: 300px auto auto auto;
+    padding: 50px 0 0 0;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.box-text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    background-color: lightgrey;
+    padding: 10px;
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    float: left;
+    width: 30%;
+    margin: 100px 100px 0 100px;
 }
